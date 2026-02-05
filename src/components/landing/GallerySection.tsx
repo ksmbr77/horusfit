@@ -40,7 +40,7 @@ const GallerySection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-5 max-w-5xl mx-auto">
           {galleryImages.map((image, index) => (
             <motion.div
               key={image.alt}
@@ -48,7 +48,7 @@ const GallerySection = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group relative overflow-hidden rounded-xl aspect-square"
+              className="group relative overflow-hidden rounded-xl aspect-square first:col-span-2 first:aspect-video sm:first:col-span-1 sm:first:aspect-square"
             >
               <img
                 src={image.src}
