@@ -53,7 +53,7 @@ const PlansSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
           {plans.map((plan, index) => (
             <motion.div
               key={plan.name}
@@ -61,7 +61,7 @@ const PlansSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`relative flex flex-col ${plan.featured ? "card-plan-featured order-first sm:order-none" : "card-plan"}`}
+              className={`relative flex flex-col ${plan.featured ? "card-plan-featured order-first sm:order-none sm:col-span-2 lg:col-span-1" : "card-plan"}`}
             >
               {plan.featured && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">

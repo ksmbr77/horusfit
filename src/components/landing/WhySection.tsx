@@ -12,7 +12,7 @@ const WhySection = () => {
 
   return (
     <section className="py-12 md:py-20 bg-secondary overflow-hidden">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -74,6 +74,7 @@ const WhySection = () => {
               transition={{ delay: 0.4, duration: 0.5 }}
               viewport={{ once: true }}
               className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 card-premium p-3 md:p-4 shadow-glow"
+            style={{ boxShadow: "var(--shadow-glow)" }}
             >
               <div className="font-display text-2xl md:text-3xl text-gradient">+50</div>
               <div className="text-muted-foreground text-xs">Equipamentos</div>

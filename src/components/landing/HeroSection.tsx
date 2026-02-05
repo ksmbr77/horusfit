@@ -25,7 +25,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20 md:py-0">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 py-20 md:py-0">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           {/* Badge */}
           <motion.span
@@ -64,7 +64,7 @@ const HeroSection = () => {
 
           {/* Subheadline */}
           <motion.p
-            className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 md:mb-8 px-4"
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 md:mb-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.6 }}
@@ -74,7 +74,7 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto px-4 sm:px-0"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.6 }}
@@ -83,7 +83,7 @@ const HeroSection = () => {
               variant="hero" 
               size="xl"
               onClick={handleCTA}
-              className="w-full sm:w-auto sm:min-w-[240px]"
+              className="w-full sm:w-auto min-w-0 sm:min-w-[220px]"
             >
               Quero Treinar na Hórus
             </Button>

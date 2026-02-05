@@ -1,25 +1,26 @@
 import { motion } from "framer-motion";
+import { forwardRef } from "react";
 import horusLogo from "@/assets/horus-logo.png";
 import { Instagram, MapPin, Clock, ExternalLink } from "lucide-react";
 
-const Footer = () => {
+const Footer = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <footer className="bg-background border-t border-border py-10 md:py-14">
+    <footer ref={ref} className="bg-background border-t border-border py-8 md:py-12">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8"
         >
           {/* Logo & Social */}
-          <div className="text-center md:text-left">
-            <img src={horusLogo} alt="Hórus Fit" className="w-24 md:w-28 mx-auto md:mx-0 mb-3" />
+          <div className="text-center sm:text-left">
+            <img src={horusLogo} alt="Hórus Fit" className="w-20 md:w-24 mx-auto sm:mx-0 mb-3" />
             <p className="text-muted-foreground text-sm mb-4">
               Centro de Treinamento de Tobias Barreto/SE
             </p>
-            <div className="flex gap-3 justify-center md:justify-start">
+            <div className="flex gap-3 justify-center sm:justify-start">
               <a
                 href="https://instagram.com/horusfittb"
                 target="_blank"
@@ -42,8 +43,8 @@ const Footer = () => {
           </div>
 
           {/* Location */}
-          <div className="text-center md:text-left">
-            <h4 className="font-display text-base md:text-lg text-foreground mb-3 flex items-center gap-2 justify-center md:justify-start">
+          <div className="text-center sm:text-left">
+            <h4 className="font-display text-base md:text-lg text-foreground mb-2 flex items-center gap-2 justify-center sm:justify-start">
               <MapPin className="w-4 h-4 text-primary" />
               Localização
             </h4>
@@ -55,8 +56,8 @@ const Footer = () => {
           </div>
 
           {/* Hours */}
-          <div className="text-center md:text-left">
-            <h4 className="font-display text-base md:text-lg text-foreground mb-3 flex items-center gap-2 justify-center md:justify-start">
+          <div className="text-center sm:text-left sm:col-span-2 md:col-span-1">
+            <h4 className="font-display text-base md:text-lg text-foreground mb-2 flex items-center gap-2 justify-center sm:justify-start">
               <Clock className="w-4 h-4 text-primary" />
               Horários
             </h4>
@@ -72,7 +73,7 @@ const Footer = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="border-t border-border mt-8 pt-6 text-center"
+          className="border-t border-border mt-6 pt-5 text-center"
         >
           <p className="text-muted-foreground text-xs">
             © 2026 Hórus Fit Academia. Todos os direitos reservados.
@@ -84,6 +85,8 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+});
+
+Footer.displayName = "Footer";
 
 export default Footer;

@@ -57,17 +57,17 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contato" className="section-dark section-pattern">
+    <section id="contato" className="section-dark section-pattern py-16 md:py-24">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="max-w-lg mx-auto"
+          className="max-w-md mx-auto"
         >
-          <div className="text-center mb-8">
-            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-foreground mb-3">
+          <div className="text-center mb-6 md:mb-8">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-foreground mb-2">
               FAÇA PARTE DA <span className="text-gradient">HISTÓRIA</span>
             </h2>
             <p className="text-muted-foreground text-sm sm:text-base">
@@ -81,9 +81,9 @@ const ContactSection = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
             onSubmit={handleSubmit}
-            className="card-premium space-y-5"
+            className="card-premium space-y-4"
           >
-            <div>
+            <div className="space-y-1.5">
               <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                 Nome Completo
               </label>
@@ -99,7 +99,7 @@ const ContactSection = () => {
               {errors.name && <p className="text-destructive text-xs mt-1">{errors.name}</p>}
             </div>
 
-            <div>
+            <div className="space-y-1.5">
               <label htmlFor="whatsapp" className="block text-sm font-medium text-foreground mb-2">
                 WhatsApp
               </label>
@@ -115,7 +115,7 @@ const ContactSection = () => {
               {errors.whatsapp && <p className="text-destructive text-xs mt-1">{errors.whatsapp}</p>}
             </div>
 
-            <div>
+            <div className="space-y-1.5">
               <label htmlFor="plan" className="block text-sm font-medium text-foreground mb-2">
                 Plano de Interesse
               </label>
@@ -135,7 +135,7 @@ const ContactSection = () => {
             <Button
               type="submit"
               variant="cta"
-              size="xl"
+              size="lg"
               className="w-full"
               disabled={isLoading}
             >
