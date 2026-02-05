@@ -76,7 +76,7 @@ const WhySection = () => {
               className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 card-premium p-3 md:p-4 shadow-glow"
             style={{ boxShadow: "var(--shadow-glow)" }}
             >
-              <div className="font-display text-2xl md:text-3xl text-gradient">+50</div>
+              <div className="font-display text-2xl md:text-3xl text-gradient">+100</div>
               <div className="text-muted-foreground text-xs">Equipamentos</div>
             </motion.div>
           </motion.div>
