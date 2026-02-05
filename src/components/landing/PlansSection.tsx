@@ -6,25 +6,27 @@ const WHATSAPP_NUMBER = "5579999498196";
 
 const plans = [
   {
-    name: "Trimestral",
-    price: "90",
-    period: "/mês",
-    total: "R$ 270 total",
-    featured: false,
-  },
-  {
     name: "Mensal",
     price: "100",
-    period: "/mês",
-    total: "Sem fidelidade",
+    period: "",
+    total: "Musculação + Aulas personalizadas",
     featured: true,
     badge: "MAIS ESCOLHIDO",
   },
   {
+    name: "Trimestral",
+    price: "95",
+    period: "",
+    total: "3x de R$95,00",
+    subtitle: "Musculação + Aulas personalizadas",
+    featured: false,
+  },
+  {
     name: "Semestral",
-    price: "80",
-    period: "/mês",
-    total: "R$ 480 total",
+    price: "90",
+    period: "",
+    total: "6x de R$90,00",
+    subtitle: "Musculação + aulas personalizadas + avaliação física",
     featured: false,
   },
 ];
@@ -73,18 +75,25 @@ const PlansSection = () => {
               )}
 
               <div className="text-center flex-1 flex flex-col justify-center pt-4">
-                <h3 className="font-display text-2xl text-foreground mb-0.5">
+                <h3 className="font-display text-2xl text-foreground mb-2">
                   {plan.name}
                 </h3>
-                <p className="text-muted-foreground text-xs mb-4">{plan.total}</p>
                 
-                <div className="flex items-baseline justify-center gap-0.5 mb-6">
+                {!plan.featured && plan.total && (
+                  <p className="text-muted-foreground text-xs mb-1">{plan.total}</p>
+                )}
+                
+                <div className="flex items-baseline justify-center gap-0.5 mb-2">
                   <span className="text-muted-foreground text-base">R$</span>
                   <span className={`font-display text-5xl sm:text-6xl leading-none ${plan.featured ? 'text-gradient' : 'text-foreground'}`}>
                     {plan.price}
                   </span>
-                  <span className="text-muted-foreground text-sm">{plan.period}</span>
+                  <span className="text-muted-foreground text-sm">,00</span>
                 </div>
+                
+                <p className="text-muted-foreground text-xs px-2">
+                  {plan.featured ? plan.total : (plan as any).subtitle}
+                </p>
               </div>
 
               <Button
