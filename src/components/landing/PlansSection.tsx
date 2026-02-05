@@ -6,15 +6,6 @@ const WHATSAPP_NUMBER = "5579999498196";
 
 const plans = [
   {
-    name: "Mensal",
-    price: "100",
-    installments: null,
-    description: "Musculação + Aulas personalizadas",
-    featured: true,
-    badge: "MAIS ESCOLHIDO",
-    discount: null,
-  },
-  {
     name: "Trimestral",
     price: "95",
     installments: "3x de",
@@ -22,6 +13,15 @@ const plans = [
     featured: false,
     badge: null,
     discount: "5% OFF",
+  },
+  {
+    name: "Mensal",
+    price: "100",
+    installments: null,
+    description: "Musculação + Aulas personalizadas",
+    featured: true,
+    badge: "MAIS ESCOLHIDO",
+    discount: null,
   },
   {
     name: "Semestral",
@@ -66,7 +66,7 @@ const PlansSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`relative flex flex-col p-6 md:p-8 ${plan.featured ? "card-plan-featured order-first sm:order-none sm:col-span-2 lg:col-span-1" : "card-plan"}`}
+              className={`relative flex flex-col p-6 md:p-8 ${plan.featured ? "card-plan-featured" : "card-plan"}`}
             >
               {/* Badge para plano em destaque */}
               {plan.featured && plan.badge && (
