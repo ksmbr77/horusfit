@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Sparkles, Globe2, MapPin, Clock } from "lucide-react";
+import { Sparkles, Globe2, MapPin, Clock, Moon } from "lucide-react";
 
 const differentials = [
   {
@@ -11,6 +11,11 @@ const differentials = [
     icon: Globe2,
     title: "Estrutura Internacional",
     description: "Padrão de Centro de Treinamento profissional.",
+  },
+  {
+    icon: Moon,
+    title: "Blackout às 21h",
+    description: "Iluminação vermelha total para treinos intensos à noite.",
   },
   {
     icon: MapPin,
@@ -40,7 +45,7 @@ const DifferentialsSection = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 max-w-5xl mx-auto">
           {differentials.map((item, index) => (
             <motion.div
               key={item.title}
