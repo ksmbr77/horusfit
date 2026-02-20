@@ -6,13 +6,6 @@ const WHATSAPP_NUMBER = "5579999498196";
 
 const plans = [
   {
-    name: "Trimestral",
-    price: "90",
-    period: "/mês",
-    total: "R$ 270 total",
-    featured: false,
-  },
-  {
     name: "Mensal",
     price: "100",
     period: "/mês",
@@ -21,10 +14,24 @@ const plans = [
     badge: "MAIS ESCOLHIDO",
   },
   {
-    name: "Semestral",
-    price: "80",
+    name: "Trimestral",
+    price: "95",
     period: "/mês",
-    total: "R$ 480 total",
+    total: "R$ 285 total",
+    featured: false,
+  },
+  {
+    name: "Semestral",
+    price: "90",
+    period: "/mês",
+    total: "R$ 540 total",
+    featured: false,
+  },
+  {
+    name: "Anual",
+    price: "85",
+    period: "/mês",
+    total: "R$ 1.020 total",
     featured: false,
   },
 ];
@@ -53,7 +60,7 @@ const PlansSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
           {plans.map((plan, index) => (
             <motion.div
               key={plan.name}
