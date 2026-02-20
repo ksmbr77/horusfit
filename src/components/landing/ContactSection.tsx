@@ -125,8 +125,9 @@ const ContactSection = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="Plano Mensal - R$100/mês">Plano Mensal - R$100/mês</SelectItem>
-                  <SelectItem value="Plano Trimestral - R$90/mês">Plano Trimestral - R$90/mês</SelectItem>
-                  <SelectItem value="Plano Semestral - R$80/mês">Plano Semestral - R$80/mês</SelectItem>
+                  <SelectItem value="Plano Trimestral - R$95/mês">Plano Trimestral - R$95/mês</SelectItem>
+                  <SelectItem value="Plano Semestral - R$90/mês">Plano Semestral - R$90/mês</SelectItem>
+                  <SelectItem value="Plano Anual - R$85/mês">Plano Anual - R$85/mês</SelectItem>
                 </SelectContent>
               </Select>
               {errors.plan && <p className="text-destructive text-xs mt-1">{errors.plan}</p>}
