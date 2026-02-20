@@ -27,10 +27,19 @@ const plans = [
     name: "Semestral",
     price: "90",
     installments: "6x de",
-    description: "Musculação + aulas personalizadas + avaliação física",
+    description: "Musculação + Aulas personalizadas + Avaliação física",
     featured: false,
     badge: null,
     discount: "10% OFF",
+  },
+  {
+    name: "Anual",
+    price: "85",
+    installments: "12x de",
+    description: "Musculação + Aulas personalizadas + Avaliação física",
+    featured: false,
+    badge: null,
+    discount: "15% OFF",
   },
 ];
 
@@ -58,7 +67,7 @@ const PlansSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
             <motion.div
               key={plan.name}
