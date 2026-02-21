@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { forwardRef } from "react";
 import horusLogo from "@/assets/horus-logo.png";
+import flyAgencyLogo from "@/assets/fly-agency-logo.png";
 import { Instagram, MapPin, Clock, ExternalLink } from "lucide-react";
 
 const Footer = forwardRef<HTMLElement>((_, ref) => {
@@ -81,6 +82,10 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
           <p className="text-muted-foreground text-xs mt-1">
             WhatsApp: (79) 99949-8196 | @horusfittb
           </p>
+          <div className="flex items-center justify-center gap-2 mt-4">
+            <span className="text-muted-foreground text-xs">Desenvolvido por</span>
+            <img src={flyAgencyLogo} alt="Fly Agency Digital" className="h-6 md:h-8 inline-block" />
+          </div>
         </motion.div>
       </div>
     </footer>
