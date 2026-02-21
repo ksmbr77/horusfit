@@ -82,10 +82,15 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
           <p className="text-muted-foreground text-xs mt-1">
             WhatsApp: (79) 99949-8196 | @horusfittb
           </p>
-          <div className="flex items-center justify-center gap-2 mt-4">
-            <span className="text-muted-foreground text-xs">Desenvolvido por</span>
-            <img src={flyAgencyLogo} alt="Fly Agency Digital" className="h-6 md:h-8 inline-block" />
-          </div>
+          <a
+            href="https://www.instagram.com/fly.agencyy/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 mt-4 hover:opacity-80 transition-opacity"
+          >
+            <span className="text-muted-foreground text-sm">Desenvolvido por</span>
+            <img src={flyAgencyLogo} alt="Fly Agency Digital" className="h-12 md:h-16 inline-block" />
+          </a>
         </motion.div>
       </div>
     </footer>
